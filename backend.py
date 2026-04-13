@@ -206,3 +206,7 @@ def podium_breakdown_by_driver(driver_id: str):
     plt.close(fig)
 
     return StreamingResponse(buf, media_type="image/png")
+
+@app.get("/team/points/{team_id}")
+def team_points_over_time(team_id: str):
+    
